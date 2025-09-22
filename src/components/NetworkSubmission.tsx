@@ -6,6 +6,7 @@ interface NetworkSubmissionProps {
   color: string;
   iconSrc: string;
   onFileSelect: (network: string, file: File | null) => void;
+  selectedFile: File | null;
   submitSuccess: boolean;
   submitError?: string; // Made optional
 }
@@ -15,6 +16,7 @@ const NetworkSubmission: React.FC<NetworkSubmissionProps> = ({
   color, 
   iconSrc, 
   onFileSelect,
+  selectedFile,
   submitSuccess,
   submitError
 }) => {
@@ -67,6 +69,7 @@ const NetworkSubmission: React.FC<NetworkSubmissionProps> = ({
           onFileSelect={handleFileSelect}
           acceptedTypes={getAcceptedTypes()}
           maxSizeMB={100}
+          selectedFile={selectedFile}
         />
 
         {submitSuccess && (

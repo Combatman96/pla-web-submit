@@ -63,6 +63,53 @@ function ErrorModal({ message, onClose }: { message: string; onClose: () => void
   );
 }
 
+// Add SuccessModal component
+function SuccessModal({ message, onClose }: { message: string; onClose: () => void }) {
+  return (
+    <div className="modal-overlay" style={{
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      backgroundColor: 'rgba(0, 0, 0, 0.5)',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      zIndex: 1000
+    }}>
+      <div className="modal" style={{
+        backgroundColor: '#fff',
+        padding: '20px',
+        borderRadius: '8px',
+        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+        maxWidth: '400px',
+        textAlign: 'center'
+      }}>
+        <p style={{
+          fontSize: '16px',
+          color: '#333',
+          marginBottom: '20px'
+        }}>{message}</p>
+        <button
+          onClick={onClose}
+          className="modal-close-btn"
+          style={{
+            backgroundColor: '#007BFF',
+            color: '#fff',
+            border: 'none',
+            padding: '10px 20px',
+            borderRadius: '4px',
+            cursor: 'pointer'
+          }}
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  );
+}
+
 function App() {
   const [selectedFiles, setSelectedFiles] = useState<NetworkFiles>({
     AppLovin: null,
@@ -73,6 +120,7 @@ function App() {
   const [submitSuccess, setSubmitSuccess] = useState<string[]>([]);
   const [submitError, setSubmitError] = useState<string>('');
   const [showErrorModal, setShowErrorModal] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
   // Global metadata fields
   const [projectName, setProjectName] = useState<string>('');
   const [plaName, setPlaName] = useState<string>('');
@@ -124,14 +172,12 @@ function App() {
     if (!validateForm()) {
       return;
     }
-
     const filesToSubmit = Object.entries(selectedFiles).filter(([_, file]) => file !== null);
 
     if (filesToSubmit.length === 0) {
       handleError('Please select at least one file to submit');
       return;
     }
-
     setIsSubmitting(true);
     setSubmitError('');
     setSubmitSuccess([]);
@@ -150,24 +196,27 @@ function App() {
       formData.append('assigneeEmail', assigneeEmail || '');
       formData.append('difficulty', difficulty === '' ? '' : String(difficulty));
 
-      const response = await fetch('https://example.com/api/submit-all', {
+      const response = await fetch('http://localhost:3888/api/playable-ads-submit', {
         method: 'POST',
         body: formData,
       });
 
       if (response.ok) {
-        alert('All files submitted successfully!');
         setSubmitSuccess(Object.keys(selectedFiles));
         setSelectedFiles({
           AppLovin: null,
           Google: null,
           Unity: null,
         });
+        setProjectName('');
+        setPlaName('');
+        setAssigneeEmail('');
+        setDifficulty('');
+        setShowSuccessModal(true);
       } else {
         handleError('Failed to submit files. Please try again.');
       }
     } catch (error) {
-      console.error('Error submitting files:', error);
       handleError('An error occurred. Please try again later.');
     } finally {
       setIsSubmitting(false);
@@ -314,6 +363,13 @@ function App() {
         <ErrorModal
           message={submitError}
           onClose={() => setShowErrorModal(false)}
+        />
+      )}
+
+      {showSuccessModal && (
+        <SuccessModal
+          message="All files submitted successfully!"
+          onClose={() => setShowSuccessModal(false)}
         />
       )}
     </div>

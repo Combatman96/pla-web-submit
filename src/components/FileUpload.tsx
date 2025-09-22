@@ -5,18 +5,32 @@ interface FileUploadProps {
   onFileSelect: (file: File | null) => void;
   acceptedTypes: string;
   maxSizeMB?: number;
+  selectedFile?: File | null;
 }
 
 const FileUpload: React.FC<FileUploadProps> = ({ 
   network, 
   onFileSelect, 
   acceptedTypes, 
-  maxSizeMB = 50 
+  maxSizeMB = 50,
+  selectedFile: propSelectedFile
 }) => {
   const [dragActive, setDragActive] = useState(false);
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [localSelectedFile, setLocalSelectedFile] = useState<File | null>(null);
   const [error, setError] = useState<string>('');
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Sync local state with parent-controlled selectedFile prop so clearing from parent
+  // (e.g. on successful submit) resets the displayed file in this component.
+  React.useEffect(() => {
+    if (typeof propSelectedFile !== 'undefined') {
+      setLocalSelectedFile(propSelectedFile ?? null);
+      if (propSelectedFile === null) {
+        setError('');
+        if (fileInputRef.current) fileInputRef.current.value = '';
+      }
+    }
+  }, [propSelectedFile]);
 
   const validateFile = (file: File): boolean => {
     setError('');
@@ -47,10 +61,10 @@ const FileUpload: React.FC<FileUploadProps> = ({
 
   const handleFileChange = (file: File | null) => {
     if (file && validateFile(file)) {
-      setSelectedFile(file);
+      setLocalSelectedFile(file);
       onFileSelect(file);
     } else {
-      setSelectedFile(null);
+      setLocalSelectedFile(null);
       onFileSelect(null);
     }
   };
@@ -86,7 +100,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
   };
 
   const removeFile = () => {
-    setSelectedFile(null);
+    setLocalSelectedFile(null);
     setError('');
     onFileSelect(null);
     if (fileInputRef.current) {
@@ -122,11 +136,11 @@ const FileUpload: React.FC<FileUploadProps> = ({
           style={{ display: 'none' }}
         />
         
-        {selectedFile ? (
+        {localSelectedFile ? (
           <div className="file-selected">
             <div className="file-info">
-              <span className="file-name">{selectedFile.name}</span>
-              <span className="file-size">{formatFileSize(selectedFile.size)}</span>
+              <span className="file-name">{localSelectedFile.name}</span>
+              <span className="file-size">{formatFileSize(localSelectedFile.size)}</span>
             </div>
             <button 
               type="button" 
