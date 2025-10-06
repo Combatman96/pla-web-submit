@@ -8,7 +8,7 @@ import members from './assets/json/members_data.json'
 import projects from './assets/json/projects_data.json'
 
 type Member = { name: string; email: string }
-type Project = { name: string }
+type Project = { name: string, project: string }
 
 interface NetworkFiles {
   AppLovin: File | null;
@@ -129,7 +129,7 @@ function App() {
 
   // Build dropdown options from JSON
   const memberOptions = useMemo(() => (members as Member[]).map(m => ({ label: `${m.name} (${m.email})`, value: m.email })), [])
-  const projectOptions = useMemo(() => (projects as Project[]).map(p => ({ label: p.name, value: p.name })), [])
+  const projectOptions = useMemo(() => (projects as Project[]).map(p => ({ label: p.name, value: p.project })), [])
 
   const handleFileSelect = (network: string, file: File | null) => {
     setSelectedFiles(prev => ({
@@ -196,7 +196,8 @@ function App() {
       formData.append('assigneeEmail', assigneeEmail || '');
       formData.append('difficulty', difficulty === '' ? '' : String(difficulty));
       /// load from .env
-      const url = import.meta.env.VITE_API_BASE_URL + 'playable-ads-submit';
+      // const url = import.meta.env.VITE_API_BASE_URL + 'playable-ads-submit';
+      const url = "http://localhost:3888/api/playable-ads-submit";
       const response = await fetch(url, {
         method: 'POST',
         body: formData,

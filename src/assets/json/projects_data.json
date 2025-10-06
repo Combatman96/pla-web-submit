@@ -1,16 +1,15 @@
 [
     {
-        "name": "Coffee Rush"
+        "name": "Coffee Rush",
+        "project": "igame-coffee-rush"
     },
     {
-        "name": "Block Buster"
+        "name": "Block Buster",
+        "project": "igame-block-buster"
 
     },
     {
-        "name": "Royal Rescue"
-    },
-    {
-        "name": "Color Yarn 3D"
+        "name": "Royal Rescue",
+        "project": "igame-royal-rescue"
     }
-
 ]
