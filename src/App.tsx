@@ -196,8 +196,8 @@ function App() {
       formData.append('assigneeEmail', assigneeEmail || '');
       formData.append('difficulty', difficulty === '' ? '' : String(difficulty));
       /// load from .env
-      // const url = import.meta.env.VITE_API_BASE_URL + 'playable-ads-submit';
-      const url = "http://localhost:3888/api/playable-ads-submit";
+      const url = import.meta.env.VITE_API_BASE_URL + 'playable-ads-submit';
+      // const url = "http://localhost:3888/api/playable-ads-submit";
       const response = await fetch(url, {
         method: 'POST',
         body: formData,
