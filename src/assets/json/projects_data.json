@@ -1,15 +1,121 @@
 [
+{
+    "name": "iG Woodle",
+    "projectId": "iGWD",
+    "slackChannelId": "C098X0911JT",
+    "userList": "U043Q9MT5PF,U07LAAEAXFE,U06TVG76PQU,U08UHN9KD55,U043LKTH19U",
+    "cloudAddress": "\\192.168.10.100\\iKame\\iKame Games\\Marketing - Game\\Ad Asset - Game\\68_iG Wooldle\\2.Playable Ads"
+  },
     {
-        "name": "Coffee Rush",
-        "project": "igame-coffee-rush"
-    },
+    "name": "iG Match Delivery",
+    "projectId": "IGMD",
+    "slackChannelId": "C09497MR0CQ",
+    "userList": "U06TVG76PQU,U043LKTH19U,U07LAAEAXFE",
+    "cloudAddress": "\\192.168.10.100\\iKame\\iKame Games\\Marketing - Game\\Ad Asset - Game\\62_iG Match Delivery\\2.Playable Ads"
+  },
+  {
+    "name": "iG Hole Eat All",
+    "projectId": "IGHEA",
+    "slackChannelId": "C08BDFG0KK7",
+    "userList": "U043LKSQSUE,U05NJ9SQZC5,U07LAAEAXFE",
+    "cloudAddress": "\\192.168.10.100\\iKame\\iKame Games\\Marketing - Game\\Ad Asset - Game\\59_iG Hole eat all\\2.Playable Ads"
+  },
+  {
+    "name": "iG Screwzle 3D",
+    "projectId": "iGSZ",
+    "slackChannelId": "C08F4AS4T0S",
+    "userList": "U043Q9MT5PF,U07LAAEAXFE,U043LKSQSUE,U0762TXJEUD,U06LX6F602D",
+    "cloudAddress": "\\192.168.10.100\\iKame\\iKame Games\\Marketing - Game\\Ad Asset - Game\\57_iG Screwzle 3D\\2.Playable Ads"
+  },
+  {
+    "name": "iG Screwdom 3D",
+    "projectId": "IGSD",
+    "slackChannelId": "C086HG8BT7W",
+    "userList": "U07LAAEAXFE,U043Q9MT5PF,U046TP94W9E",
+    "cloudAddress": "\\192.168.10.100\\iKame\\iKame Games\\Marketing - Game\\Ad Asset - Game\\50_iG Screwdom 3D\\2.Playable Ads"
+  },
+  {
+    "name"   : "iG Good Jam"   ,
+    "projectId"     : "IGGJ"                    ,
+    "slackChannelId": "C088D46V6BS"             ,
+    "userList"      : "U043LKTAQB0,U07GUV4KUJW,U0762TXJEUD,U078BN1S7TL" ,
+    "cloudAddress"  : "\\192.168.10.100\\iKame\\iKame Games\\Marketing - Game\\Ad Asset - Game\\52_iG Goods Jam\\2.Playable Ads"
+  },
+  {
+    "name"   : "iG Drop In"     ,
+    "projectId"     : "IGDI"                        ,
+    "slackChannelId": "C09A2MX9Z9N"                   ,
+    "userList"      : "D07HN1H20BD,U05NJ9SQZC5,U044W1JGE76,U07GUV4KUJW" ,
+    "cloudAddress"  : "\\192.168.10.100\\iKame\\iKame Games\\Marketing - Game\\Ad Asset - Game\\67_iG Drop In\\2.Playable Ads"
+  },
+  {
+    "name"   : "iG Bus Out"  ,
+    "projectId"     : "iGBO"                    ,
+    "slackChannelId": "C07RG3WN8K1"             ,
+    "userList"      : "U043LKUEX7G,,U043Q9M542Z,U0445T1E325" ,
+    "cloudAddress"  : "\\192.168.10.100\\iKame\\iKame Games\\Marketing - Game\\Ad Asset - Game\\44_iG Bus Out\\2.Playable Ads"
+  },
+  {
+    "name"   : "iG Royal Rescue"  ,
+    "projectId"     : "iGRR"                        ,
+    "slackChannelId": "C089U55J205"                 ,
+    "userList"      : "U043Q9MT5PF,U05NJ9SQZC5,U043LKTAQB0,U0445T1E325" ,
+    "cloudAddress"  : "\\192.168.10.100\\iKame\\iKame Games\\Marketing - Game\\Ad Asset - Game\\54_iG Royal Rescue\\2.Playable Ads"
+  },
+  {
+    "name"   : "iG Wool Rescue"  ,
+    "projectId"     : "iGWR"                        ,
+    "slackChannelId": "C098X0E91NK"                 ,
+    "userList"      : "U043Q9MT5PF,U05NJ9SQZC5,U043LKTAQB0,U0445T1E325" ,
+    "cloudAddress"  : "\\192.168.10.100\\iKame\\iKame Games\\Marketing - Game\\Ad Asset - Game\\54_iG Royal Rescue\\2.Playable Ads"
+  }  
+  ,{
+    "name"   : "Ptit Merge Fruit"  ,
+    "projectId"     : "iGMF"                        ,
+    "slackChannelId": "C09GPUFB53J"                 ,
+    "userList"      : "U049HQL0CSJ,U043LKSQSUE,U078E6PEFA8,U08CH4KKL3V,U04T5G9EHLY,U0445T1E325" ,
+    "cloudAddress"  : "\\192.168.10.100\\iKame\\iKame Games\\Marketing - Game\\Ad Asset - Game\\65_iG Merge Fruit\\2.Playable Ads"
+  },
+  {
+    "name"   : "iG Block Buster"   ,
+    "projectId"     : "IGBB"                          ,
+    "slackChannelId": "C06A7CR8TEU"                   ,
+    "userList"      : "U043LKSQSUE,U055Z9AGP2S,U05NJ9SQZC5,U05AP3CLKMY" ,
+    "cloudAddress"  : "\\192.168.10.100\\iKame\\iKame Games\\Marketing - Game\\Ad Asset - Game\\61_IG Block Buster\\2.Playable Ads"
+  },
+  {
+    "name"   : "iG Wood Away"     ,
+    "projectId"     : "IGWA"                              ,
+    "slackChannelId": "C06A7CR8TEU"                   ,
+    "userList"      : "U043LKSQSUE,U05NJ9SQZC5,U078E6PEFA8" ,
+    "cloudAddress"  : ""
+  },
+  {
+    "name": "iG Color Yarn 3D",
+    "projectId": "IGKJ",
+    "slackChannelId": "C06A7CR8TEU",
+    "userList": "U049HQL0CSJ,U06LX6F602D,U046TP94W9E,U044GV6F1DW,U05AP3CLKMY",
+    "cloudAddress": ""
+  },
     {
-        "name": "Block Buster",
-        "project": "igame-block-buster"
-
-    },
-    {
-        "name": "Royal Rescue",
-        "project": "igame-royal-rescue"
-    }
+    "name": "iG Knit Frenzy",
+    "projectId": "iGKF",
+    "slackChannelId": "C06A7CR8TEU",
+    "userList": "U04AA7E984B,U046TP94W9E,U05AP3CLKMY,U055Z9AGP2S",
+    "cloudAddress": ""
+  },
+  {
+    "name"   : "iG Coffee Rush"  ,
+    "projectId"     : "IGCR"                        ,
+    "slackChannelId": "C06A7CR8TEU"                 ,
+    "userList"      : "U049HQL0CSJ,U043LKTH19U,U05AP3CLKMY,U0762TXJEUD,U08N4A57TJA" ,
+    "cloudAddress"  : "\\192.168.10.100\\iKame\\iKame Games\\Marketing - Game\\Ad Asset - Game\\58_iG Coffee Rush\\2.Playable Ads"
+  },
+  {
+    "name"   : "iG Cannon Hero"       ,
+    "projectId"     : "IGCH"                        ,
+    "slackChannelId": "C06A7CR8TEU"                 ,
+    "userList"      : "U043LKTAQB0,U043T8H55B4" ,
+    "cloudAddress"  : ""
+  }
 ]

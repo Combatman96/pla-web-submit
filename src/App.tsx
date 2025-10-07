@@ -8,7 +8,7 @@ import members from './assets/json/members_data.json'
 import projects from './assets/json/projects_data.json'
 
 type Member = { name: string; email: string }
-type Project = { name: string, project: string }
+type Project = { name: string }
 
 interface NetworkFiles {
   AppLovin: File | null;
@@ -129,7 +129,7 @@ function App() {
 
   // Build dropdown options from JSON
   const memberOptions = useMemo(() => (members as Member[]).map(m => ({ label: `${m.name} (${m.email})`, value: m.email })), [])
-  const projectOptions = useMemo(() => (projects as Project[]).map(p => ({ label: p.name, value: p.project })), [])
+  const projectOptions = useMemo(() => (projects as Project[]).map(p => ({ label: p.name, value: p.name })), [])
 
   const handleFileSelect = (network: string, file: File | null) => {
     setSelectedFiles(prev => ({
