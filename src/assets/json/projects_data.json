@@ -117,5 +117,12 @@
     "slackChannelId": "C06A7CR8TEU"                 ,
     "userList"      : "U043LKTAQB0,U043T8H55B4" ,
     "cloudAddress"  : ""
+  },
+  {
+    "name" : "iG Sushi Jam",
+    "projectId" : "IGSJ",
+    "slackChannelId": "C06A7CR8TEU",
+    "userList": "U05AP3CLKMY, U08N4A57TJA, U043LKUEX7G",
+    "cloudAddress": "" 
   }
 ]
