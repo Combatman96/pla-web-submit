@@ -124,5 +124,12 @@
     "slackChannelId": "C06A7CR8TEU",
     "userList": "U05AP3CLKMY, U08N4A57TJA, U043LKUEX7G",
     "cloudAddress": "" 
+  },
+  {
+    "name"   : "iG Skewer Jam"   ,
+    "projectId"     : "IGSKJ"                    ,
+    "slackChannelId": "C09CTQA3623"             ,
+    "userList"      : "U049HQL0CSJ,U043LKSQSUE,U078BN1S7TL,U07GUV4KUJW" ,
+    "cloudAddress"  : "\\\\192.168.10.100\\iKame\\iKame Games\\Marketing - Game\\Ad Asset - Game\\70_iG Skewer Jam\\2.Playable Ads"
   }
 ]
