@@ -138,5 +138,12 @@
     "slackChannelId": "C09K5HD0LU8",
     "userList": "U043Q9MT5PF,U07LAAEAXFE,U09DK5SBGEB",
     "cloudAddress": "\\\\192.168.10.100\\iKame\\iKame Games\\Marketing - Game\\Ad Asset - Game\\75_iG Hotpot Go\\2.Playable Ads"
+  },
+  {
+    "name"   : "igame-water-factory-creative"  ,
+    "projectId"     : "iGWF"                        ,
+    "slackChannelId": "C09FX70R683"                 ,
+    "userList"      : "U049HQL0CSJ,U09DK5SBGEB, U043LKTH19U, U0445T1E325" ,
+    "cloudAddress"  : "\\\\192.168.10.100\\iKame\\iKame Games\\Marketing - Game\\Ad Asset - Game\\54_iG Water Factory\\2.Playable Ads"
   }
 ]
