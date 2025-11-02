@@ -14,15 +14,13 @@ A modern React.js web application built with Vite, TypeScript, and professional 
 3. Open your browser to [http://localhost:5173](http://localhost:5173)
 
 ### Building for Production
-- Build the project (Vite only, no TS typecheck): `npm run build`
+- Build the project: `npm run build`
 - Preview production build: `npm run preview`
-- Optional: Run TypeScript type checking locally: `npm run typecheck`
 
 ### Available Scripts
 - `npm run dev` - Start development server with hot reload
-- `npm run build` - Build for production (skips TS typecheck)
+- `npm run build` - Build for production
 - `npm run preview` - Preview production build locally
-- `npm run typecheck` - Run TypeScript project references build (type check only)
 - `npm run lint` - Run ESLint for code quality checks
 
 ## Project Structure
@@ -33,20 +31,10 @@ A modern React.js web application built with Vite, TypeScript, and professional 
 - `dist/` - Production build output
 
 ## Tech Stack
-- **React 19** - UI library
+- **React 18** - UI library
 - **TypeScript** - Type safety
 - **Vite** - Fast build tool and dev server
 - **ESLint** - Code linting and quality
-
-## Deploying on Render
-
-Render may install only production dependencies during the build if `NODE_ENV=production` is set, which can omit TypeScript and `@types/*` packages. To ensure smooth builds:
-
-- This project’s `build` script uses `vite build` (no type checking) so builds succeed even if devDependencies aren’t installed.
-- For CI or local validation, run `npm run typecheck` to run full TypeScript checks.
-- If you prefer to keep type checking in Render’s build step, either:
-  - Set the environment variable `NPM_CONFIG_PRODUCTION=false` in your Render service so devDependencies are installed during build; or
-  - Move required types (`@types/react`, `@types/react-dom`) and build-time tools to `dependencies`.
 
 ## Vite Features
 
